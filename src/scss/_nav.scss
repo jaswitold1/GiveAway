@@ -1,0 +1,34 @@
+.upperMenu,
+.lowerMenu {
+  display: flex;
+  justify-content: flex-end;
+}
+.upperMenu {
+  a:hover {
+    outline: 1px solid $color-main;
+  }
+}
+.lowerMenu {
+  a:hover {
+    outline: 1px solid $color-dark-accent;
+  }
+}
+
+.upperMenu {
+  a {
+    text-decoration: none;
+    color: $color-light-accent;
+    font-weight: 200;
+    font-size: 14px;
+    margin-top: 2rem;
+    padding: 0 1rem 0 1rem;
+  }
+}
+
+.lowerMenu {
+  a {
+    margin-top: 2rem;
+    padding: 0 1rem 0 1rem;
+    font-weight: 100;
+  }
+}

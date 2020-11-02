@@ -1,0 +1,38 @@
+.threeColsContainer {
+  display: flex;
+
+  position: relative;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem 3rem 1rem;
+    * {
+      margin-top: 2rem;
+    }
+    h1 {
+      color: $color-dark-accent;
+      font-size: 3rem;
+    }
+    p {
+      color: $color-dark-accent;
+      font-weight: 600;
+    }
+    span {
+      color: $color-dark-accent;
+      text-align: center;
+    }
+  }
+}
+.threeColsContainer::before {
+  height: 100%;
+
+  width: 100vw;
+  content: "";
+  background-image: url(../assets/3cols.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
