@@ -1,7 +1,23 @@
 @import "settings/colors";
 @import "settings/fonts";
+@import "settings/reset";
+@import "nav";
+@import "header";
+@import "threeCols";
+@import "aboutUs";
+@import "fourSteps";
+@import "contact";
 
 body {
   font-family: $font-base;
-  color: $color-main;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
 }
