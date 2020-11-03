@@ -1,3 +1,4 @@
+import firebase from "firebase";
 import UpperMenu from "./UpperMenu";
 import LowerMenu from "./LowerMenu";
 import Header from "./Header";
@@ -79,7 +80,7 @@ const Home = () => {
           <AboutUs />
         </div>
 
-        <div className="WhoDoWeHelp">
+        <div className="whoDoWeHelp">
           <WhoDoWeHelp />
         </div>
         <Contact />
