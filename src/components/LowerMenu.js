@@ -11,11 +11,21 @@ import {
 const UpperMenu = () => {
   return (
     <>
-      <Link>Start</Link>
-      <Link>Jak zacząć?</Link>
-      <Link>O nas</Link>
-      <Link>Fundacje i organizacje</Link>
-      <Link>Kontakt</Link>
+      <Link to="threeCols" smooth={true}>
+        Start
+      </Link>
+      <Link to="fourSteps" smooth={true}>
+        Jak zacząć?
+      </Link>
+      <Link to="aboutUs" smooth={true}>
+        O nas
+      </Link>
+      <Link to="whoDoWeHelp" smooth={true}>
+        Fundacje i organizacje
+      </Link>
+      <Link to="contact" smooth={true}>
+        Kontakt
+      </Link>
     </>
   );
 };

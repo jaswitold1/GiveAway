@@ -1,15 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import Firebase from "./components/firebase";
+import FirebaseContext from "./components/firebaseContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <FirebaseContext.Provider value={new Firebase()}>
+      <App />
+    </FirebaseContext.Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
+
+// dlaczego firebase nie dziala bez FirebaseContext.Provider
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
