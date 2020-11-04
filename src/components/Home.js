@@ -1,4 +1,3 @@
-import firebase from "firebase";
 import UpperMenu from "./UpperMenu";
 import LowerMenu from "./LowerMenu";
 import Header from "./Header";
@@ -8,6 +7,7 @@ import Step from "./Step";
 import AboutUs from "./AboutUs";
 import WhoDoWeHelp from "./WhoDoWeHelp";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 import iconShirt from "../assets/Icon-1.svg";
 import iconBag from "../assets/Icon-2.svg";
@@ -27,7 +27,7 @@ const Home = () => {
         <div>
           <Header />
         </div>
-        <div className="threeColsContainer">
+        <div id="threeCols" className="threeColsContainer">
           <ThreeCols
             number={10}
             title={"ODDANYCH WORKÓW"}
@@ -50,7 +50,7 @@ const Home = () => {
             }
           />
         </div>
-        <div className="fourSteps">
+        <div id="fourSteps" className="fourSteps">
           <FourSteps />
           <div className="steps">
             <Step
@@ -76,14 +76,15 @@ const Home = () => {
           </div>
           <div id="giveaway">ODDAJ RZECZY</div>
         </div>
-        <div className="aboutUs">
+        <div id="aboutUs" className="aboutUs">
           <AboutUs />
         </div>
 
-        <div className="whoDoWeHelp">
+        <div id="whoDoWeHelp" className="whoDoWeHelp">
           <WhoDoWeHelp />
         </div>
-        <Contact />
+        <Contact id="contact" />
+        <Footer />
       </div>
     </>
   );
