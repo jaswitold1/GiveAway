@@ -1,0 +1,10 @@
+.reduxForm {
+  background-color: $color-light-accent;
+  form {
+    display: flex;
+    flex-direction: column;
+    div {
+      display: flex;
+    }
+  }
+}
