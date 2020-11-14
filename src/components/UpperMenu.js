@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import firebase from 'firebase'
 
 const UpperMenu = ({ handle }) => {
+  firebase.auth()
   return (
     <>
       <Link to="/logowanie">Zaloguj</Link>

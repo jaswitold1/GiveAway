@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import Firebase from "./components/firebase";
 import FirebaseContext from "./components/firebaseContext";
 
+
+
 ReactDOM.render(
   <React.StrictMode>
     <FirebaseContext.Provider value={new Firebase()}>
