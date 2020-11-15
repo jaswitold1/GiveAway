@@ -32,7 +32,7 @@ let ContactForm = props => {
 
 ContactForm = reduxForm({
   // a unique name for the form
-  form: 'contact',
+  form: 'what',
    destroyOnUnmount: false
 })(ContactForm)
 

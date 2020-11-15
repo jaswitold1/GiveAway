@@ -7,8 +7,16 @@ import ReduxFormStep2 from "./ReduxFormStep2";
 import ReduxFormStep3 from "./ReduxFormStep3";
 import ReduxFormStep4 from "./ReduxFormStep4";
 import ReduxFormStep5 from "./ReduxFormStep5";
+import firebase from 'firebase'
+import {useSelector} from 'react-redux'
 
 export default function OddajRzeczy() {
+  const form = useSelector(state => state.form)
+  const db = firebase.database()
+  const handleSendForm = () => {
+    db.ref('forms/').push(form)
+    console.log("poszlo");
+  }
 
   const [step, setStep] = useState(1);
   const handleNextStep = () => {
@@ -50,7 +58,7 @@ export default function OddajRzeczy() {
           }[step]
         }
         {step > 1 ? <button onClick={handlePrevStep}>Wstecz</button> : ''}
-        {step < 5 ?<button onClick={handleNextStep}>Dalej</button>:<button>Wyslij</button>}
+        {step < 5 ?<button onClick={handleNextStep}>Dalej</button>:<button onClick={handleSendForm}>Wyslij</button>}
         
       </div>
       </FormProvider>
