@@ -1,39 +1,38 @@
-import React, { useState } from 'react'
+import React,{useState} from "react";
+import {Field,reduxForm} from 'redux-form'
+// import {FormContext} from './formProvider'
 
-export default function ReduxFormStep4() {
-
-    const [step4,setStep4] = useState("")
-    const handleStep4 = (event) => {
-        setStep4(
-            {
-                ...step4,
-                [event.target.name]:event.target.value
-            }
-        )
-    }
-    return (
-        <div className="reduxForm">
-            <h1>Podaj adres, oraz termin odbioru rzeczy przez kuriera</h1>
-            <div>
-                <div>
-                <p>Ulica</p>
-                <input onChange={handleStep4} value={step4.Ulica} name='Ulica' type="text"/>
-            </div>
-            <div>
-                <p>Miasto</p>
-                <input onChange={handleStep4} value={step4.Miasto} name='Miasto' type="text"/>
-            </div>
-            <div>
-                <p>Kod pocztowy</p>
-                <input onChange={handleStep4} value={step4.Kod_pocztowy} name='Kod_pocztowy' type="text"/>
-            </div>
-            <div>
-                <p>Numer telefonu</p>
-                <input onChange={handleStep4} value={step4.Numer_tel} name='Numer_tel' type="text"/>
-            </div>
-            
-            </div>
-           
+let ContactForm = props => {
+  const { handleSubmit } = props
+  return <form onSubmit={handleSubmit}  className='form1 reduxForm'>
+    <h1>Zaznacz co chcesz oddać</h1>
+        <div>
+          <label htmlFor="Ulica">Ulica</label>
+        <Field  name="Ulica" component="input" type="input" />
         </div>
-    )
+         <div>
+          <label htmlFor="Miasto">Miasto</label>
+        <Field  name="Miasto" component="input" type="input" />
+        </div>
+         <div>
+          <label htmlFor="Kod pocztowy">Kod pocztowy</label>
+        <Field name="Kod pocztowy" component="input" type="input" />
+        </div>
+         <div>
+          <label htmlFor="Numer telefonu">Numer telefonu</label>
+        <Field name="Numer telefonu" component="input" type="input" />
+        </div>
+      
+       
+  </form>
 }
+
+ContactForm = reduxForm({
+  // a unique name for the form
+  form: 'contact',
+   destroyOnUnmount: false
+})(ContactForm)
+
+export default ContactForm
+
+  

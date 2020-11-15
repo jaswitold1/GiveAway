@@ -5,19 +5,30 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Firebase from "./components/firebase";
 import FirebaseContext from "./components/firebaseContext";
+import {createStore} from 'redux'
+import allReducers from './components/combineReducers'
+import {Provider} from 'react-redux'
+
+ const store = createStore(allReducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+
 
 
 
 ReactDOM.render(
   <React.StrictMode>
     <FirebaseContext.Provider value={new Firebase()}>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
+      
     </FirebaseContext.Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
 
-// dlaczego firebase nie dziala bez FirebaseContext.Provider
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

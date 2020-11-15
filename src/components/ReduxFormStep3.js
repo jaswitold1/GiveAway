@@ -1,41 +1,54 @@
 import React, { useState } from "react";
 
-export default function ReduxFormStep3() {
-  const [step3,setStep3] = useState('Warszawa')
-const [step3Who,setStep3Who] = useState("")
-  const handleStep3 = (event) => {
-setStep3(event.target.value)
-  }
-  const handleStep3Who = (event) => {
-   if (step3Who.includes(event.target.value)) {
-    setStep3Who([...step3Who.filter(el => el !== event.target.value)])
-  } else {
-    setStep3Who([...step3Who,event.target.value])
-  }
-  }
-  return (
-    <div className="reduxForm">
-      <h1>Lokalizacja</h1>
-      <select onChange={handleStep3} value={step3}  name="" id="">
+import {Field,reduxForm} from 'redux-form'
+
+
+let ContactForm = props => {
+  const { handleSubmit } = props
+  return <form onSubmit={handleSubmit}  className=' reduxForm'>
+       <label htmlFor="Lokalizacja">Lokalizacja</label>
+        <Field name="Lokalizacja" component="select"  >
+        
         <option value="Warszawa">Warszawa</option>
-        <option value="Poznań">Poznań</option>
-        <option value="Kraków">Kraków</option>
-        <option value="Wrocław">Wrocław</option>
-        <option value="Katowice">Katowice</option>
-      </select>
-      <p>Komu chcesz pomóc</p>
-      <div >
-        <p>dzieciom</p>
-        <input onChange={handleStep3Who} value='dzieciom' type="checkbox" />
-        <p>samotnym matkom</p>
-      <input onChange={handleStep3Who} value='samotnym matkom' type="checkbox" />
-      <p>bezdomnym</p>
-      <input onChange={handleStep3Who} value='bezdomnym' type="checkbox" />
-      <p>niepelnosprawnym</p>
-      <input onChange={handleStep3Who} value='niepelnosprawnym' type="checkbox" />
-      <p>osobom starszym</p>
-      <input onChange={handleStep3Who} value='osobom starszym' type="checkbox" />
-      </div>
-    </div>
-  );
+        <option value="Krakow">Krakow</option>
+        <option value="Poznan">Poznan</option>
+        <option value="Wroclaw">Wroclaw</option>
+
+        
+        </Field>
+<h1>Komu chcesz pomóc ?</h1>
+         <div>
+          <label htmlFor="dzieciom">dzieciom</label>
+        <Field  name="dzieciom" component="input" type="checkbox" />
+        </div>
+         <div>
+          <label htmlFor="samotnym matkom">Samotnym matkom</label>
+        <Field  name="Samotnym matkom" component="input" type="checkbox" />
+        </div>
+         <div>
+          <label htmlFor="bezdomnym">bezdomnym</label>
+        <Field name="bezdomnym" component="input" type="checkbox" />
+        </div>
+         <div>
+          <label htmlFor="niepelnosprawnym">niepelnosprawnym</label>
+        <Field name="niepelnosprawnym" component="input" type="checkbox" />
+        </div>
+         <div>
+          <label htmlFor="osobom starszym">osobom starszym</label>
+        <Field name="osobom starszym" component="input" type="checkbox" />
+        </div>
+
+    
+       
+  </form>
 }
+
+ContactForm = reduxForm({
+  // a unique name for the form
+  form: 'contact',
+   destroyOnUnmount: false
+})(ContactForm)
+
+export default ContactForm
+
+  

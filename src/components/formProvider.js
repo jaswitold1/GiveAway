@@ -8,7 +8,7 @@ export const FormProvider = (props) => {
         dupa:"dupa",
     })
     const handleInput = (event) => {
-        console.log("dupa");
+       
         setFormData({
             ...formData,
             [event.target.name]:event.target.value,
