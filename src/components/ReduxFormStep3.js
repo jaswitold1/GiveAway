@@ -1,21 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function ReduxFormStep3() {
-  return (
-    <div className="reduxForm">
-      <h1>Lokalizacja</h1>
-      <select name="" id="">
-        <option value="">Warszawa</option>
-        <option value="">Poznań</option>
-        <option value="">Kraków</option>
-        <option value="">Wrocław</option>
-        <option value="">Katowice</option>
-      </select>
-      <input type="checkbox" />
-      <input type="checkbox" />
-      <input type="checkbox" />
-      <input type="checkbox" />
-      <input type="checkbox" />
-    </div>
-  );
+import {Field,reduxForm} from 'redux-form'
+
+
+let ContactForm = props => {
+  const { handleSubmit } = props
+  return <form onSubmit={handleSubmit}  className=' reduxForm'>
+       <label htmlFor="Lokalizacja">Lokalizacja</label>
+        <Field name="Lokalizacja" component="select"  >
+        
+        <option value="Warszawa">Warszawa</option>
+        <option value="Krakow">Krakow</option>
+        <option value="Poznan">Poznan</option>
+        <option value="Wroclaw">Wroclaw</option>
+
+        
+        </Field>
+<h1>Komu chcesz pomóc ?</h1>
+         <div>
+          <label htmlFor="dzieciom">dzieciom</label>
+        <Field  name="dzieciom" component="input" type="checkbox" />
+        </div>
+         <div>
+          <label htmlFor="samotnym matkom">Samotnym matkom</label>
+        <Field  name="Samotnym matkom" component="input" type="checkbox" />
+        </div>
+         <div>
+          <label htmlFor="bezdomnym">bezdomnym</label>
+        <Field name="bezdomnym" component="input" type="checkbox" />
+        </div>
+         <div>
+          <label htmlFor="niepelnosprawnym">niepelnosprawnym</label>
+        <Field name="niepelnosprawnym" component="input" type="checkbox" />
+        </div>
+         <div>
+          <label htmlFor="osobom starszym">osobom starszym</label>
+        <Field name="osobom starszym" component="input" type="checkbox" />
+        </div>
+
+    
+       
+  </form>
 }
+
+ContactForm = reduxForm({
+  // a unique name for the form
+  form: 'contact',
+   destroyOnUnmount: false
+})(ContactForm)
+
+export default ContactForm
+
+  
