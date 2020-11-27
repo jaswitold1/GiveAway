@@ -4,8 +4,6 @@ import Foundations from "./Foundations";
 import Govs from "./Govs";
 import Locals from "./Locals";
 
-
-
 export default function WhoDoWeHelp() {
   
   const [isClicked, setIsClicked] = useState({

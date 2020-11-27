@@ -15,7 +15,7 @@ export default function OddajRzeczy() {
   const db = firebase.database()
   const handleSendForm = () => {
     db.ref('forms/').push(form)
-    console.log("poszlo");
+    console.log("poszlo"); 
   }
 
   const [step, setStep] = useState(1);
