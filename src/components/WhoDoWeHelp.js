@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import decoration from "../assets/Decoration.svg";
 import Foundations from "./Foundations";
 import Govs from "./Govs";
