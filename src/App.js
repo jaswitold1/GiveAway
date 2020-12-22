@@ -10,6 +10,7 @@ function App() {
     <BrowserRouter>
       <Route exact path="/" component={Home} />
       <Route exact path="/logowanie" component={Logowanie} />
+      
     </BrowserRouter>
   );
 }
