@@ -1,11 +1,14 @@
 import React from 'react'
-
+import LoggedUpperMenu from './LoggedUpperMenu'
+import LowerMenu from './LowerMenu'
 import Header from "./Header";
 import ThreeCols from "./ThreeCols";
 import FourSteps from "./FourSteps";
 import Step from "./Step";
 import AboutUs from "./AboutUs";
 import WhoDoWeHelp from "./WhoDoWeHelp";
+import Contact from './Contact'
+import Footer from './Footer'
 
 import iconShirt from "../assets/Icon-1.svg";
 import iconBag from "../assets/Icon-2.svg";
@@ -15,6 +18,13 @@ import iconArrows from "../assets/Icon-4.svg";
 export default function main() {
     return (
         <div>
+           <div className='upperMenu'>
+         <LoggedUpperMenu/>
+       </div>
+        
+        <div className="lowerMenu">
+          <LowerMenu />
+        </div>
                <div>
               <Header />
             </div>
@@ -72,6 +82,8 @@ export default function main() {
             </div>
             <div id="whoDoWeHelp" className="whoDoWeHelp">
               <WhoDoWeHelp />
+              <Contact id="contact" />
+        <Footer />
             </div>{" "}
         </div>
     )

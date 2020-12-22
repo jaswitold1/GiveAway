@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+
 import firebase from 'firebase'
 
 const UpperMenu = () => {
@@ -8,10 +8,9 @@ const UpperMenu = () => {
     <>
       <Link to="/logowanie">Zaloguj</Link>
       <Link to="/rejestracja">Załóż Konto</Link>
+      <Link to='wylogowano'>Wyloguj się</Link>
 
-      <Link to="/oddaj-rzeczy" >
-        Oddaj Rzeczy
-      </Link>
+      
     </>
   );
 };
