@@ -16,6 +16,9 @@ const Home = () => {
   return (
    
     <BrowserRouter>
+    {
+      //sprawdzic w adobe xd czy lower menu nie powinno byc w komponencie Main
+    }
     
 
       <div className="container">
