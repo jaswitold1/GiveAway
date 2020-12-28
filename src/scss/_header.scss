@@ -19,7 +19,7 @@
       margin: 1rem 0 1rem 0;
     }
 
-    div {
+    .stepsLandingPage {
       display: flex;
       width: 10rem;
       justify-content: space-evenly;
@@ -29,6 +29,31 @@
         font-size: 1.5rem;
         font-weight: 100;
         padding: 2rem;
+      }
+    }
+    .stepsForm {
+      display: flex;
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        margin: 5px;
+        width: 8rem;
+        p {
+          width: 5rem;
+        }
+      }
+      div::after {
+        position: absolute;
+        border: 1px solid $color-dark-accent;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 8rem;
+        height: 8rem;
+        transform: rotate(45deg);
       }
     }
   }

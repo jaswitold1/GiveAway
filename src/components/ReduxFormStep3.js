@@ -6,6 +6,12 @@ import {Field,reduxForm} from 'redux-form'
 let ContactForm = props => {
   const { handleSubmit } = props
   return <form onSubmit={handleSubmit}  className=' reduxForm'>
+    <div className="important">
+        <h1>Wazne !</h1>
+        <p>
+       Jeśli wiesz komu chcesz pomóc, możesz wpisać nazwę tej organizacji w wyszukiwarce. Możesz też filtrować organizacje po ich lokalizacji bądź celu ich pomocy.
+        </p>
+      </div>
        <label htmlFor="Lokalizacja">Lokalizacja</label>
         <Field name="Lokalizacja" component="select"  >
         

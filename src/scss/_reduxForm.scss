@@ -1,5 +1,6 @@
 .reduxForm {
-  background-color: $color-light-accent;
+  background: url("../assets/Background-Form.jpg") no-repeat center;
+  height: 40rem;
   form {
     display: flex;
     flex-direction: column;

@@ -12,7 +12,7 @@ const Header = () => {
         <h1>Zacznij Pomagać!</h1>
         <h1>Oddaj niechcianie rzeczy w zaufane ręce!</h1>
         <img className="decoration" src={decoration} alt="" />
-        <div>
+        <div className={'stepsLandingPage'}>
           <Link to={linkOddajRzeczy}>ODDAJ RZECZY</Link>
           <p>STWÓRZ ZBIÓRKĘ</p>
         </div>

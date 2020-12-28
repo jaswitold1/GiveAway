@@ -36,19 +36,27 @@ export default function OddajRzeczy() {
           <h1>POTRZEBUJĄCYM</h1>
           <img className="decoration" src={decoration} alt="" />
           <h1>Wystarczą 4 proste kroki</h1>
-          <div>
-
-            <h1></h1>
+          <div className={'stepsForm'}>
+         <div >
+           <h1>1</h1>
+           <p>Wybierz rzeczy</p>
+         </div>
+         <div>
+           <h1>2</h1>
+           <p>Spakuj je w worki</p>
+         </div>
+         <div>
+           <h1>3</h1>
+           <p>Wybierz fundację</p>
+         </div>
+         <div>
+           <h1>4</h1>
+           <p>Zamów kuriera</p>
+         </div>
           </div>
         </div>
       </div>
-      <div className="important">
-        <h1>Wazne !</h1>
-        <p>
-          Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy
-          wiedzieć komu najlepiej je przekazać
-        </p>
-      </div>
+      
       
       <div className="reduxFormBackground">
         {
