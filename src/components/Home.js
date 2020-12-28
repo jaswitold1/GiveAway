@@ -1,7 +1,7 @@
 import LoggedUpperMenu from "./LoggedUpperMenu";
 import LowerMenu from "./LowerMenu";
 import main from './main'
-
+import UpperMenu from './UpperMenu'
 import Contact from "./Contact";
 import Footer from "./Footer";
 
@@ -20,7 +20,9 @@ const Home = () => {
     
 
       <div className="container">
-      
+      <div className="upperMenu">
+          <UpperMenu  />
+        </div>
         
           <Route exact path="/" component={main}/>
            

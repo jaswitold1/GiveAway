@@ -7,6 +7,7 @@ import ReduxFormStep2 from "./ReduxFormStep2";
 import ReduxFormStep3 from "./ReduxFormStep3";
 import ReduxFormStep4 from "./ReduxFormStep4";
 import ReduxFormStep5 from "./ReduxFormStep5";
+import Contact from './Contact'
 import firebase from 'firebase'
 import {useSelector} from 'react-redux'
 
@@ -34,18 +35,28 @@ export default function OddajRzeczy() {
           <h1>Oddaj rzeczy, których juz nie chcesz</h1>
           <h1>POTRZEBUJĄCYM</h1>
           <img className="decoration" src={decoration} alt="" />
-          <div>
-            <h2>Wystarczą 4 proste kroki</h2>
+          <h1>Wystarczą 4 proste kroki</h1>
+          <div className={'stepsForm'}>
+         <div >
+           <h1>1</h1>
+           <p>Wybierz rzeczy</p>
+         </div>
+         <div>
+           <h1>2</h1>
+           <p>Spakuj je w worki</p>
+         </div>
+         <div>
+           <h1>3</h1>
+           <p>Wybierz fundację</p>
+         </div>
+         <div>
+           <h1>4</h1>
+           <p>Zamów kuriera</p>
+         </div>
           </div>
         </div>
       </div>
-      <div className="important">
-        <h1>Wazne !</h1>
-        <p>
-          Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy
-          wiedzieć komu najlepiej je przekazać
-        </p>
-      </div>
+      
       
       <div className="reduxFormBackground">
         {
@@ -62,6 +73,7 @@ export default function OddajRzeczy() {
         
       </div>
       </FormProvider>
+      <Contact/>
     </>
     
   );

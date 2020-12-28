@@ -2,13 +2,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  .fourStepsHeader {
+    display: flex;
+    flex-direction: column;
+  }
   h1 {
     font-size: 2rem;
-    padding: 1rem;
+    margin-top: 3rem;
     color: $color-dark-accent;
   }
   .decorationSteps {
     padding: 1rem 3.5rem 1rem 3.5rem;
+    zoom: 0.8;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
   }
 }
 .steps {
@@ -18,7 +25,7 @@
     * {
       margin: 3px;
     }
-    padding: 1rem;
+    padding: 3rem;
 
     display: flex;
     flex-direction: column;
@@ -28,7 +35,7 @@
 }
 .steps::before {
   height: 100%;
-  margin-left: -25vw;
+  margin-left: -15vw;
   width: 100vw;
   content: "";
   background-color: $color-back;
@@ -44,5 +51,5 @@
   font-size: 20px;
   border: 1px solid $color-dark-accent;
   padding: 20px 50px 20px 50px;
-  margin: 20px;
+  margin: 3rem;
 }

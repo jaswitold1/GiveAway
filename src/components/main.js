@@ -18,9 +18,7 @@ import iconArrows from "../assets/Icon-4.svg";
 export default function main() {
     return (
         <div>
-           <div className='upperMenu'>
-         <LoggedUpperMenu/>
-       </div>
+        
         
         <div className="lowerMenu">
           <LowerMenu />
@@ -82,9 +80,10 @@ export default function main() {
             </div>
             <div id="whoDoWeHelp" className="whoDoWeHelp">
               <WhoDoWeHelp />
+            
+            </div>{" "}
               <Contact id="contact" />
         <Footer />
-            </div>{" "}
         </div>
     )
 }

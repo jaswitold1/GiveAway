@@ -5,6 +5,12 @@ import {Field,reduxForm} from 'redux-form'
 let ContactForm = props => {
   const { handleSubmit } = props
   return <form onSubmit={handleSubmit}  className='form1 reduxForm'>
+    <div className="important">
+        <h1>Wazne !</h1>
+        <p>
+   Podaj adres oraz termin odbioru rzeczy.
+        </p>
+      </div>
     <h1>Zaznacz co chcesz oddać</h1>
         <div>
           <label htmlFor="Ulica">Ulica</label>

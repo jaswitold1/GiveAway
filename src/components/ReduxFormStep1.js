@@ -5,6 +5,13 @@ import {Field,reduxForm} from 'redux-form'
 let ContactForm = props => {
   const { handleSubmit } = props
   return <form onSubmit={handleSubmit}  className='form1 reduxForm'>
+    <div className="important">
+        <h1>Wazne !</h1>
+        <p>
+          Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy
+          wiedzieć komu najlepiej je przekazać
+        </p>
+      </div>
     <h1>Zaznacz co chcesz oddać</h1>
         <div>
           <label htmlFor="Ubrania, które nadają się do ponownego uzycia">Ubrania, które nadają się do ponownego uzycia</label>

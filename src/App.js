@@ -9,9 +9,7 @@ import UpperMenu from './components/UpperMenu'
 function App() {
   return (
     <BrowserRouter>
-    <div className="upperMenu">
-          <UpperMenu  />
-        </div>
+    
       <Route exact path="/" component={Home} />
       <Route exact path="/logowanie" component={Logowanie} />
       
