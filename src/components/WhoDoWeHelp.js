@@ -32,6 +32,9 @@ export default function WhoDoWeHelp() {
           </button>
         </div>
       </div>
+      <p>
+        W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.
+      </p>
       {isClicked.fund ? <Foundations /> : ""}
       {isClicked.govs ? <Govs /> : ""}
       {isClicked.local ? <Locals /> : ""}

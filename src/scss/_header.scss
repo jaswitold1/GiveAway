@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 5rem;
     h1 {
       font-size: 2rem;
       font-weight: 200;
@@ -17,12 +18,17 @@
     * {
       margin: 1rem 0 1rem 0;
     }
-    > div {
+
+    div {
       display: flex;
-      h2 {
-        width: 100px;
-        padding: 1rem;
-        border: 1px solid $color-dark-accent;
+      width: 10rem;
+      justify-content: space-evenly;
+      * {
+        border: 1px solid black;
+        margin: 1rem;
+        font-size: 1.5rem;
+        font-weight: 100;
+        padding: 2rem;
       }
     }
   }

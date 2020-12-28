@@ -80,9 +80,10 @@ export default function main() {
             </div>
             <div id="whoDoWeHelp" className="whoDoWeHelp">
               <WhoDoWeHelp />
+            
+            </div>{" "}
               <Contact id="contact" />
         <Footer />
-            </div>{" "}
         </div>
     )
 }
