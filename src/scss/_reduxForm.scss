@@ -1,5 +1,7 @@
 .reduxForm {
-  background: url("../assets/Background-Form.jpg") no-repeat center;
+  background: url("../assets/Background-Form.jpg") no-repeat;
+  background-position: right top;
+  background-size: cover;
   height: 40rem;
   form {
     display: flex;
