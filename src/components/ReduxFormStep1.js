@@ -18,8 +18,8 @@ let ContactForm = props => {
         <Field  name="Ubrania, które nadają się do ponownego uzycia" component="input" type="checkbox" />
         </div>
          <div>
-          <label htmlFor="Ubrania do wyrzucenia">Ubrania do wyrzucenia</label>
-        <Field  name="Ubrania do wyrzucenia" component="input" type="checkbox" />
+          <label className='css-label' htmlFor="Ubrania do wyrzucenia">Ubrania do wyrzucenia</label>
+        <Field  name="Ubrania do wyrzucenia" component="input" type="checkbox" className='css-checkbox' />
         </div>
          <div>
           <label htmlFor="Ksiazki">Ksiazki</label>

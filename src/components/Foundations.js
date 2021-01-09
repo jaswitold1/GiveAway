@@ -56,23 +56,29 @@ export default function Foundations() {
   }, [data]);
 
   return (
-    <div>
+    <div className='rows'>
       {sliced ? (
         <ul>
           {sliced.map((el, i) => {
-            return <li key={i}>{el[0]}</li>;
+            return <div className='row' key={i}>
+              <h1>Fundacja :{el[0]}</h1>
+              <span>{el[1].cel}</span>
+              <span className='spanBold'>Artykuły:</span><span>{el[1].co}</span>
+            </div>;
           })}
         </ul>
       ) : (
         "ladowanie"
       )}
-      <div>
+      <div className='pages'>
         {pages
           ? pages.map((el, i) => {
               return (
-                <li onClick={handleClick} id={el} key={i}>
+                <div >
+                  <span  onClick={handleClick} id={el} key={i}>
                   {el}
-                </li>
+                </span>
+                </div>
               );
             })
           : "ladowanie"}

@@ -24,11 +24,11 @@ export default function WhoDoWeHelp() {
           <button onClick={isClickedToggle} name="fund">
             Fundacjom
           </button>
-          <button onClick={isClickedToggle} name="govs">
-            Organizacjom pozarządowym
-          </button>
           <button onClick={isClickedToggle} name="local">
             Lokalnym zbiórkom
+          </button>
+          <button onClick={isClickedToggle} name="govs">
+            Organizacjom pozarządowym
           </button>
         </div>
       </div>

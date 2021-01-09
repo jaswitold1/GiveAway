@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Govs() {
-  return <div>govsssssssss</div>;
+  return <div>Organizacje pozarzadowe</div>;
 }
