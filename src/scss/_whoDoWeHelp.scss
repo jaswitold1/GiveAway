@@ -31,4 +31,24 @@
   p {
     width: 30rem;
   }
+  .pages {
+    list-style: none;
+    display: flex;
+    div {
+      padding: 10px;
+    }
+
+    div:hover {
+      cursor: pointer;
+      outline: 1px solid $color-main;
+    }
+  }
+  .rows {
+    .row {
+      border-top: 1px solid $color-dark-accent;
+      .spanBold {
+        font-weight: 600;
+      }
+    }
+  }
 }

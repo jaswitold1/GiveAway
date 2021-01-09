@@ -8,7 +8,7 @@ const UpperMenu = () => {
     <>
       <Link to="/logowanie">Zaloguj</Link>
       <Link to="/rejestracja">Załóż Konto</Link>
-      <Link to='wylogowano'>Wyloguj się</Link>
+      <Link to='/wylogowano'>Wyloguj się</Link>
        <Link to="/oddaj-rzeczy" >
         Oddaj Rzeczy
       </Link>

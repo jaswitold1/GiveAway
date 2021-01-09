@@ -2,6 +2,7 @@
   display: flex;
   justify-content: flex-end;
   height: 700px;
+
   .header {
     margin-top: 10rem;
     display: flex;
@@ -23,12 +24,15 @@
       display: flex;
       width: 10rem;
       justify-content: space-evenly;
+
       * {
         border: 1px solid black;
         margin: 1rem;
         font-size: 1.5rem;
         font-weight: 100;
         padding: 2rem;
+        text-decoration: none;
+        color: $color-dark-accent;
       }
     }
     .stepsForm {
@@ -43,6 +47,9 @@
         width: 8rem;
         p {
           width: 5rem;
+          margin-left: 1rem;
+          font-size: 18px;
+          font-weight: 100;
         }
       }
       div::after {
