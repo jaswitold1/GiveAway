@@ -1,9 +1,9 @@
-import LoggedUpperMenu from "./LoggedUpperMenu";
-import LowerMenu from "./LowerMenu";
+
 import main from './main'
 import UpperMenu from './UpperMenu'
-import Contact from "./Contact";
-import Footer from "./Footer";
+
+import Logowanie from "./Logowanie";
+import Rejestracja from "./Rejestracja"
 
 
 
@@ -26,7 +26,9 @@ const Home = () => {
         
           <Route exact path="/" component={main}/>
            
-       
+        <Route  path="/logowanie" component={Logowanie} />
+     
+      <Route  path="/rejestracja" component={Rejestracja} />
           <Route exact path="/oddaj-rzeczy" component={OddajRzeczy}/>
         
         
