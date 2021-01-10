@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 
 import firebase from 'firebase'
 
@@ -6,12 +6,12 @@ const UpperMenu = () => {
   firebase.auth()
   return (
     <>
-      <Link to="/logowanie">Zaloguj</Link>
-      <Link to="/rejestracja">Załóż Konto</Link>
-      <Link to='/wylogowano'>Wyloguj się</Link>
-       <Link to="/oddaj-rzeczy" >
+      <NavLink to="/logowanie">Zaloguj</NavLink>
+      <NavLink to="/rejestracja">Załóż Konto</NavLink>
+      <NavLink to='/wylogowano'>Wyloguj się</NavLink>
+       <NavLink to="/oddaj-rzeczy" >
         Oddaj Rzeczy
-      </Link>
+      </NavLink>
 
       
     </>
