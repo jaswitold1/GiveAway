@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 
 import firebase from "firebase";
 import { useState, useEffect } from "react";
-import { useStore } from "react-redux";
 
 const UpperMenu = () => {
   const [username, setUsername] = useState();
@@ -19,14 +18,22 @@ const UpperMenu = () => {
 
   return (
     <>
-      <NavLink to='/'>Strona główna</NavLink>
-      <NavLink to='/logowanie'>Zaloguj</NavLink>
-      <NavLink to='/rejestracja'>Załóż Konto</NavLink>
-      <div>{username}</div>
-      <NavLink onClick={handleSignOut} to='/wylogowano'>
-        Wyloguj się
-      </NavLink>
-      <NavLink to='/oddaj-rzeczy'>Oddaj Rzeczy</NavLink>
+      {username == "" ? (
+        <div className='upperMenu'>
+          <NavLink to='/'>Main page</NavLink>
+          <NavLink to='/logowanie'>Log In</NavLink>
+          <NavLink to='/rejestracja'>Create an Account</NavLink>
+        </div>
+      ) : (
+        <div className='upperMenu'>
+          <div>Welcome {username}</div>
+          <NavLink to='/'>Main page</NavLink>
+          <NavLink onClick={handleSignOut} to='/wylogowano'>
+            Log Out
+          </NavLink>
+          <NavLink to='/oddaj-rzeczy'>Give stuff away !</NavLink>
+        </div>
+      )}
     </>
   );
 };

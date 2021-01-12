@@ -3,7 +3,7 @@ import UpperMenu from "./UpperMenu";
 
 import Logowanie from "./Logowanie";
 import Rejestracja from "./Rejestracja";
-
+import Wyloguj from "./Wyloguj";
 import OddajRzeczy from "./OddajRzeczy";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
@@ -18,7 +18,7 @@ const Home = () => {
         <Route exact path='/' component={main} />
 
         <Route path='/logowanie' component={Logowanie} />
-
+        <Route path='/wylogowano' component={Wyloguj} />
         <Route path='/rejestracja' component={Rejestracja} />
         <Route exact path='/oddaj-rzeczy' component={OddajRzeczy} />
       </div>

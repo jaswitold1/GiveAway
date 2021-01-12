@@ -1,37 +1,50 @@
 import React, { useState } from "react";
-import firebase from 'firebase'
-import decoration from '../assets/Decoration.svg'
+import firebase from "firebase";
+import decoration from "../assets/Decoration.svg";
+import { useHistory } from "react-router-dom";
 
+export default function Logowanie() {
+  const [auth, setAuth] = useState({});
+  const [error, setError] = useState("");
+  let history = useHistory();
 
+  const handleAuth = (event) => {
+    setAuth({
+      ...auth,
+      [event.target.name]: event.target.value,
+    });
+  };
+  const handleLogin = () => {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(auth.email, auth.password)
+      .catch((err) => {
+        setError(err.message);
+      });
 
-export default
-  function Logowanie() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        history.push("/");
+      }
+    });
+  };
 
-    const [auth,setAuth] = useState({})
-
-    const handleAuth = (event) => {
-      setAuth(
-        {
-          ...auth,
-          [event.target.name]:event.target.value
-        }
-      )
-    }
-
-    
-  return <div>
-    <h1>Zaloguj się</h1>
-    <img src={decoration}/>
-    <div>
-      <form>
-        <label htmlFor="email">Email</label>
-        <input onChange={handleAuth} name='email' type="text"/>
-        <label htmlFor="password">Hasło</label>
-        <input onChange={handleAuth} name='password' type="password"/>
-        <label  htmlFor="repeatpassword">Powtórz Hasło</label>
-        <input onChange={handleAuth} name='repeatpassword' type="password"/>
-      </form>
+  return (
+    <div className='login'>
+      <h1>Log In !</h1>
+      <img src={decoration} />
+      <div>
+        <form>
+          <label htmlFor='email'>Email</label>
+          <input onChange={handleAuth} name='email' type='text' />
+          <label htmlFor='password'>Password</label>
+          <input onChange={handleAuth} name='password' type='password' />
+        </form>
+        <div>{error}</div>
+      </div>
+      <button className={"authBtn"} onClick={handleLogin}>
+        Log In
+      </button>
     </div>
-  </div>;
+  );
 }
-
