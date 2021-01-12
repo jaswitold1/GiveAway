@@ -1,3 +1,32 @@
-.signin {
-  margin-top: 10rem;
+.logout,
+.signin,
+.login {
+  color: $color-dark-accent;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  form {
+    background-color: #f0f1f1;
+    display: flex;
+    flex-direction: column;
+  }
+  p,
+  label {
+    font-size: 1rem;
+  }
+  input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  input:focus {
+    outline-style: none;
+  }
+
+  * {
+    margin: 1rem;
+  }
 }

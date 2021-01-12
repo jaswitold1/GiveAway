@@ -15,12 +15,13 @@
 }
 
 .upperMenu {
-  a {
+  a,
+  div {
     text-decoration: none;
     color: $color-light-accent;
     font-weight: 200;
     font-size: 14px;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 0 1rem 0 1rem;
   }
 }
