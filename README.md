@@ -4,4 +4,4 @@ Form handled with Redux-Form library. On click form is being sent to firebase.
 
 LIVE:
 
-https://oddamzadarmo.netlify.app/
+https://givestuffaway.netlify.app/
