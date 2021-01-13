@@ -34,11 +34,11 @@
   .pages {
     list-style: none;
     display: flex;
-    div {
+    span {
       padding: 10px;
     }
 
-    div:hover {
+    span:hover {
       cursor: pointer;
       outline: 1px solid $color-main;
     }

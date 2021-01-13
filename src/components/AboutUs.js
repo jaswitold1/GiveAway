@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <>
       <div>
-        <h1>O nas</h1>
+        <h1>About us</h1>
         <img src={decorationAboutUs} />
         <p>
           Nori grape silver beet broccoli kombu beet greens fava bean potato

@@ -60,11 +60,14 @@ export default function Foundations() {
       {sliced ? (
         <ul>
           {sliced.map((el, i) => {
-            return <div className='row' key={i}>
-              <h1>Fundacja :{el[0]}</h1>
-              <span>{el[1].cel}</span>
-              <span className='spanBold'>Artykuły:</span><span>{el[1].co}</span>
-            </div>;
+            return (
+              <div className='row' key={i}>
+                <h1>Foundation: {el[0]}</h1>
+                <span>{el[1].cel}</span>
+                <span className='spanBold'>Donations:</span>
+                <span>{el[1].co}</span>
+              </div>
+            );
           })}
         </ul>
       ) : (
@@ -74,11 +77,9 @@ export default function Foundations() {
         {pages
           ? pages.map((el, i) => {
               return (
-                <div >
-                  <span  onClick={handleClick} id={el} key={i}>
+                <span onClick={handleClick} id={el} key={i}>
                   {el}
                 </span>
-                </div>
               );
             })
           : "ladowanie"}
