@@ -7,17 +7,17 @@ let ContactForm = (props) => {
   return (
     <div>
       <div className='important'>
-        <h1>Wazne !</h1>
+        <h1>Important !</h1>
         <p>
-          Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy
-          wiedzieć komu najlepiej je przekazać
+          Fill in the details. With this information we can allocate the
+          donation better.
         </p>
       </div>
       <form onSubmit={handleSubmit} className='form1 reduxForm'>
-        <h1>Zaznacz co chcesz oddać</h1>
+        <h1>What do You want to donate? </h1>
         <div>
           <label htmlFor='Ubrania, które nadają się do ponownego uzycia'>
-            Ubrania, które nadają się do ponownego uzycia
+            Clothing, mint condition
           </label>
           <Field
             name='Ubrania, które nadają się do ponownego uzycia'
@@ -27,7 +27,7 @@ let ContactForm = (props) => {
         </div>
         <div>
           <label className='css-label' htmlFor='Ubrania do wyrzucenia'>
-            Ubrania do wyrzucenia
+            Clothing, good condition
           </label>
           <Field
             name='Ubrania do wyrzucenia'
@@ -37,15 +37,15 @@ let ContactForm = (props) => {
           />
         </div>
         <div>
-          <label htmlFor='Ksiazki'>Ksiazki</label>
+          <label htmlFor='Ksiazki'>Books</label>
           <Field name='Ksiazki' component='input' type='checkbox' />
         </div>
         <div>
-          <label htmlFor='Zabawki'>Zabawki</label>
+          <label htmlFor='Zabawki'>Toys</label>
           <Field name='Zabawki' component='input' type='checkbox' />
         </div>
         <div>
-          <label htmlFor='Inne'>Inne</label>
+          <label htmlFor='Inne'>Other</label>
           <Field name='Inne' component='input' type='checkbox' />
         </div>
       </form>

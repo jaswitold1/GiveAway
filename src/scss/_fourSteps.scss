@@ -19,8 +19,11 @@
   }
 }
 .steps {
+  width: 100%;
+  background-color: $color-back;
   display: flex;
   position: relative;
+  justify-content: center;
   .stepElement {
     * {
       margin: 3px;
@@ -33,20 +36,20 @@
     text-align: center;
   }
 }
-.steps::before {
-  height: 100%;
-  margin-left: -15vw;
-  width: 100vw;
-  content: "";
-  background-color: $color-back;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
+// .steps::before {
+//   height: 100%;
+//   margin-left: -15vw;
+//   width: 100vw;
+//   content: "";
+//   background-color: $color-back;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: -1;
+// }
 
 #giveaway {
-  width: 70px;
+  width: 50px;
   font-weight: 100;
   font-size: 20px;
   border: 1px solid $color-dark-accent;

@@ -8,16 +8,16 @@ let ContactForm = (props) => {
   return (
     <div>
       <div className='important'>
-        <h1>Wazne !</h1>
+        <h1>Important !</h1>
         <p>
-          Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję
-          jak poprawnie spakować rzeczy znajdziesz TUTAJ.
+          Please pack all things in 60 Litre bags. Detailed instruction on how
+          ot pack it is available HERE.
         </p>
       </div>
 
       <form className='form2 reduxForm'>
         <label htmlFor='W ile 60L worków zapakowano rzeczy?'>
-          W ile 60L worków zapakowano rzeczy?
+          How many 60L bags have You filled?
         </label>
         <Field name={`How many bags have You packed?` + " "} component='select'>
           <option disabled='true' value=''>

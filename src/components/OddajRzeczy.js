@@ -13,10 +13,6 @@ import { useSelector } from "react-redux";
 
 export default function OddajRzeczy() {
   const form = useSelector((state) => state.form);
-  const what = useSelector((state) => state.form.what.values);
-  const howManyBags = useSelector((state) => state.form.howManyBags.values);
-  const whereAndWhom = useSelector((state) => state.form.whereAndWhom.values);
-  const contact = useSelector((state) => state.form.contact.values);
 
   const db = firebase.database();
   const handleSendForm = () => {
@@ -37,26 +33,26 @@ export default function OddajRzeczy() {
         <div className='headerContainer'>
           <img alt='nieuzywane rzeczy' src={HeroImg} />
           <div className='header'>
-            <h1>Oddaj rzeczy, których juz nie chcesz</h1>
-            <h1>POTRZEBUJĄCYM</h1>
+            <h1>Donate stuff You dont want anymore</h1>
+            <h1>TO THOSE IN NEED</h1>
             <img className='decoration' src={decoration} alt='' />
-            <h1>Wystarczą 4 proste kroki</h1>
+            <h1>It's just 4 simple steps</h1>
             <div className={"stepsForm"}>
               <div>
                 <h1>1</h1>
-                <p>Wybierz rzeczy</p>
+                <p>Choose things</p>
               </div>
               <div>
                 <h1>2</h1>
-                <p>Spakuj je w worki</p>
+                <p>Pack it in bags</p>
               </div>
               <div>
                 <h1>3</h1>
-                <p>Wybierz fundację</p>
+                <p>Foundation pick</p>
               </div>
               <div>
                 <h1>4</h1>
-                <p>Zamów kuriera</p>
+                <p>Order the Courier</p>
               </div>
             </div>
           </div>
@@ -73,14 +69,17 @@ export default function OddajRzeczy() {
             }[step]
           }
           <div className='buttonContainer'>
-            {step > 1 ? <button onClick={handlePrevStep}>Wstecz</button> : ""}
+            {step > 1 ? <button onClick={handlePrevStep}>Back</button> : ""}
             {step < 5 ? (
-              <button onClick={handleNextStep}>Dalej</button>
-            ) : what && whereAndWhom && howManyBags && contact ? (
-              <button onClick={handleSendForm}>Wyslij</button>
+              <button onClick={handleNextStep}>Next</button>
+            ) : form.what.values &&
+              form.whereAndWhom.values &&
+              form.howManyBags.values &&
+              form.contact.values ? (
+              <button onClick={handleSendForm}>Send</button>
             ) : (
               <button disabled='true' onClick={handleSendForm}>
-                Wyslij
+                Send
               </button>
             )}
           </div>

@@ -62,9 +62,9 @@ export default function Foundations() {
           {sliced.map((el, i) => {
             return (
               <div className='row' key={i}>
-                <h1>Fundacja :{el[0]}</h1>
+                <h1>Foundation: {el[0]}</h1>
                 <span>{el[1].cel}</span>
-                <span className='spanBold'>Artykuły:</span>
+                <span className='spanBold'>Donations:</span>
                 <span>{el[1].co}</span>
               </div>
             );

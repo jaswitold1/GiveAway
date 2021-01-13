@@ -7,8 +7,8 @@ let ContactForm = (props) => {
   return (
     <div>
       <div className='important'>
-        <h1>Wazne !</h1>
-        <p>Podaj adres oraz termin odbioru rzeczy.</p>
+        <h1>Important !</h1>
+        <p>Make sure the address is correct</p>
       </div>
       <form onSubmit={handleSubmit} className='form1 reduxForm'>
         <h1>Fill in Your address</h1>

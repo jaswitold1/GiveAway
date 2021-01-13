@@ -1,11 +1,10 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import decoration from "../assets/Decoration.svg";
 import Foundations from "./Foundations";
 import Govs from "./Govs";
 import Locals from "./Locals";
 
 export default function WhoDoWeHelp() {
-  
   const [isClicked, setIsClicked] = useState({
     fund: true,
   });
@@ -18,22 +17,23 @@ export default function WhoDoWeHelp() {
   return (
     <>
       <div>
-        <h1>Komu Pomagamy?</h1>
+        <h1>Who do we help?</h1>
         <img src={decoration} />
         <div>
-          <button onClick={isClickedToggle} name="fund">
-            Fundacjom
+          <button onClick={isClickedToggle} name='fund'>
+            Foundations
           </button>
-          <button onClick={isClickedToggle} name="local">
-            Lokalnym zbiórkom
+          <button onClick={isClickedToggle} name='local'>
+            Local donations
           </button>
-          <button onClick={isClickedToggle} name="govs">
-            Organizacjom pozarządowym
+          <button onClick={isClickedToggle} name='govs'>
+            Government organisations
           </button>
         </div>
       </div>
       <p>
-        W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.
+        In our database You can find all Foundations we collaborate with. You
+        can see what they do, who do they help and what do they need.
       </p>
       {isClicked.fund ? <Foundations /> : ""}
       {isClicked.govs ? <Govs /> : ""}
