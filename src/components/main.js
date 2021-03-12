@@ -1,5 +1,5 @@
 import React from "react";
-import LoggedUpperMenu from "./LoggedUpperMenu";
+
 import LowerMenu from "./LowerMenu";
 import Header from "./Header";
 import ThreeCols from "./ThreeCols";

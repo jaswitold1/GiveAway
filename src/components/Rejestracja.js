@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import firebase from "firebase";
 import decoration from "../assets/Decoration.svg";
 import { useHistory } from "react-router-dom";

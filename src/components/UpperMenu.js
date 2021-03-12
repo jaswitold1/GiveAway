@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 import firebase from "firebase";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const UpperMenu = () => {
   const [username, setUsername] = useState();

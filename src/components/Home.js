@@ -5,7 +5,7 @@ import Logowanie from "./Logowanie";
 import Rejestracja from "./Rejestracja";
 import Wyloguj from "./Wyloguj";
 import OddajRzeczy from "./OddajRzeczy";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 const Home = () => {
   return (

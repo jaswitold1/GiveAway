@@ -1,4 +1,3 @@
-import * as Scroll from "react-scroll";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const UpperMenu = () => {

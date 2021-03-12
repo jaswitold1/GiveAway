@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const linkOddajRzeczy = "/oddaj-rzeczy";
-  const linkNotLogged = "/logowanie";
+
   return (
     <div className='headerContainer'>
       <img alt='nieuzywane rzeczy' src={HeroImg} />
