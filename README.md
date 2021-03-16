@@ -5,7 +5,7 @@ Form handled with Redux (Redux-Form library).
 On click the form is being sent to Firebase. 
 Routing based on React Router
 Database of available foundations fetched from Firebase - listed with pagination.
-User autenthication - FirebaseAuth.
+User autenthication with validation and error handling - FirebaseAuth.
 
 Project was provided in Adobe XD by UX/UI Designer regarding excercise with simulated Scrum sprint. Unfortunately there was no views for Mobile etc. so the project is not responsive at the moment.
 
