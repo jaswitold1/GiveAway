@@ -2,7 +2,7 @@
 
 Webpage with form designed for giving away things You don't use anymore. 
 Form handled with Redux (Redux-Form library).
-On click the form is being sent to Firebase Real - Time database. 
+On click the form is being sent to Firebase. 
 Routing based on React Router
 Database of available foundations fetched from Firebase - listed with pagination.
 User autenthication - FirebaseAuth.
